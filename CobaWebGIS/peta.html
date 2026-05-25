@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Peta Taman Makam Pahlawan</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="peta.css"/>
+</head>
+
+<body>
+
+<header>WebGIS Taman Makam Pahlawan 10 Nopember Surabaya</header>
+<a href="index.html" class="back-btn">← Kembali</a>
+
+<!-- SEARCH -->
+<div id="searchBox">
+    <span class="search-icon">&#128269;</span>
+    <input id="searchInput" type="text" placeholder="Cari nama pahlawan...">
+</div>
+<div id="searchResults"></div>
+
+<!-- SIDE PANEL -->
+<div id="sidePanel">
+    <div class="panel-header">
+        <div>
+            <div class="ph-title" id="panelTitle">Informasi Makam</div>
+            <div class="ph-sub"   id="panelSub">—</div>
+        </div>
+        <button class="close-btn" id="closePanel">&#x2715;</button>
+    </div>
+    <div class="panel-body" id="panelBody"></div>
+    <div class="nav-row" id="navRow" style="display:none;">
+        <button class="nav-btn" id="navPrev">&#8592;</button>
+        <span   class="nav-count" id="navCount">1 dari 1</span>
+        <button class="nav-btn" id="navNext">&#8594;</button>
+    </div>
+</div>
+
+<div id="map"></div>
+<!-- LAYER TOGGLE -->
+<div class="layer-toggle-wrap">
+    <div class="layer-toggle-label">Tampilan Layer</div>
+    <div class="layer-toggle-btns">
+        <button id="toggleBlok"  class="layer-toggle-btn active" onclick="setActiveLayer('blok')">
+            🗺️ Per Blok
+        </button>
+        <button id="toggleNisan" class="layer-toggle-btn"        onclick="setActiveLayer('nisan')">
+            🪦 Per Nisan
+        </button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="peta.js"></script>
+
+</body>
+</html>
